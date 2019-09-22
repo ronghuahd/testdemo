@@ -10,6 +10,7 @@ public class Dgo {
     private void getTest(){
         System.out.println("get");
         System.out.println("change1");
+        System.out.println("创建新分支");
     }
 
 
