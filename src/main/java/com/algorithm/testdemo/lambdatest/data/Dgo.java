@@ -9,5 +9,8 @@ package com.algorithm.testdemo.lambdatest.data;
 public class Dgo {
     private void getTest(){
         System.out.println("get");
+        System.out.println("change1");
     }
+
+
 }
