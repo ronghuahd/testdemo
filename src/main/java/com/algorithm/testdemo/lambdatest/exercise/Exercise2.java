@@ -43,7 +43,7 @@ public class Exercise2 {
         set.add(new Person("路飞", 22));
         set.add(new Person("小龙", 21));
         set.add(new Person("王妈", 40));
-        System.out.println("java");
+        System.out.println("++++++++");
         System.out.println(set);
 
     }
