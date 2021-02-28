@@ -20,6 +20,7 @@ public class Exercise1 {
         list.add(new Person("小王", 15));
         list.add(new Person("王叔", 35));
         list.add(new Person("莉莉", 13));
+        list.add(new Person("test数据",13));
         list.add(new Person("路西", 22));
         list.add(new Person("小龙", 21));
         list.add(new Person("王妈", 40));
