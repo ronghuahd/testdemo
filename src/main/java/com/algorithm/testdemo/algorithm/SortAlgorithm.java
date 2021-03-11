@@ -4,6 +4,7 @@ import com.sun.deploy.util.ArrayUtil;
 import jdk.nashorn.internal.ir.LiteralNode;
 import org.thymeleaf.util.ArrayUtils;
 
+import javax.swing.*;
 import java.sql.Array;
 import java.util.Arrays;
 
@@ -16,7 +17,43 @@ public class SortAlgorithm {
         System.out.println("选择结果：" + Arrays.toString(chooseSort(array)));
         System.out.println("插入结果：" + Arrays.toString(insertSort(array)));
         System.out.println("希尔结果：" + Arrays.toString(shellSort(array)));
+        System.out.println("快速排序结果：" + Arrays.toString(fastSort(array)));
     }
+
+    // 快速排序 有个中间值pivot，自己确定，一般取排列第一个
+    // 递归
+    public static int[] fastSort(int[] array) {
+        int[] result = retNewArray(array);
+        fastSort_Real(result, 0, result.length - 1);
+        return result;
+    }
+
+    // 快速排序。pivot选第一个值，左右下标输入
+    private static void fastSort_Real(int[] array, int left, int right) {
+        if (right <= left) {
+            return;
+        }
+        // 记录边界值
+        int l = left;
+        int r = right;
+        int pivot = array[left];
+        // 标志位，判断左右游标
+        while (left < right) {
+            while (left < right && array[right] >= pivot) {
+                right = right - 1;
+            }
+            array[left] = array[right];
+            while (left < right && array[left] <= pivot) {
+                left = left + 1;
+            }
+            array[right] = array[left];
+        }
+        array[left] = pivot;
+        // 递归继续两边
+        fastSort_Real(array, l, left - 1);
+        fastSort_Real(array, left + 1, r);
+    }
+
 
     // 希尔排序，分割再对子列进行插入排序
     // 将待排序数组按照步长gap进行分组，
