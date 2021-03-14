@@ -13,10 +13,10 @@ public class SortAlgorithm {
 
     public static void main(String[] args) {
         int[] array = {37, 47, 23, 101, 100, 19, 20, 19, 200, 3, 88, 88};
-        System.out.println("冒泡结果：" + Arrays.toString(bubbleSort(array)));
-        System.out.println("选择结果：" + Arrays.toString(chooseSort(array)));
-        System.out.println("插入结果：" + Arrays.toString(insertSort(array)));
-        System.out.println("希尔结果：" + Arrays.toString(shellSort(array)));
+        System.out.println("冒泡排序结果：" + Arrays.toString(bubbleSort(array)));
+        System.out.println("选择排序结果：" + Arrays.toString(chooseSort(array)));
+        System.out.println("插入排序结果：" + Arrays.toString(insertSort(array)));
+        System.out.println("希尔排序结果：" + Arrays.toString(shellSort(array)));
         System.out.println("快速排序结果：" + Arrays.toString(fastSort(array)));
     }
 
@@ -37,7 +37,7 @@ public class SortAlgorithm {
         int l = left;
         int r = right;
         int pivot = array[left];
-        // 标志位，判断左右游标
+        // 满足条件就交换数据，否则移动游标
         while (left < right) {
             while (left < right && array[right] >= pivot) {
                 right = right - 1;
