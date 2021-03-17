@@ -1,11 +1,5 @@
 package com.algorithm.testdemo.algorithm;
 
-import com.sun.deploy.util.ArrayUtil;
-import jdk.nashorn.internal.ir.LiteralNode;
-import org.thymeleaf.util.ArrayUtils;
-
-import javax.swing.*;
-import java.sql.Array;
 import java.util.Arrays;
 
 //排序算法
